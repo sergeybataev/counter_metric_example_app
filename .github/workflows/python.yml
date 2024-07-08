@@ -32,7 +32,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./python/Dockerfile
+          context: ./python/
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           labels: ${{ steps.meta.outputs.labels }}
